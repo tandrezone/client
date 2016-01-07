@@ -14,7 +14,7 @@ class client{
       $appN->name = $app;
       $appN->version = $version;
       $apps[] = $appN;
-      $url ="packages/moonlight/client/".$appN->name."-".$appN->version;
+      $url ="packages/moonlight/client/".$appN->name."-".$appN->version."/";
       if(file_exists($url."/loadApp.json")){
         $appf = file_get_contents($url."/loadApp.json");
         $appfD = json_decode($appf);
@@ -44,9 +44,9 @@ class client{
     }
   }
   function getHeaderFiles(){
-    $this->getConf();
-    $this->constroi();
-    return $this->headerFiles;
+    //$this->getConf();
+    //$this->constroi();
+    //return $this->headerFiles;
   }
   function getStyles(){
     $this->getConf();
@@ -59,7 +59,7 @@ class client{
   function getScripts(){
     $this->getConf();
     foreach ($this->scripts as $script) {
-      $scripts .= "<script scr='/".$script."'></script>\n";
+      $scripts .= '<script src="/'.$script.'"></script>'."\n";
     }
     return $scripts;
   }
