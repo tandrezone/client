@@ -1,0 +1,20 @@
+{
+   "name": "moonlight/router",
+   "description": "Package to routing",
+   "keywords": ["bd", "bdados", "moonlight"],
+   "homepage": "https://github.com/tandrezone/router",
+   "license": "MIT",
+   "authors": [
+      {
+         "name": "Tiago Andre",
+         "email": "tandrezone@gmail.com",
+         "homepage": "https://github.com/tandrezone"
+      }
+   ],
+   "require": {
+      "php": ">=5.3.0"
+   },
+   "autoload": {
+      "classmap": ["router.php"]
+   }
+}
