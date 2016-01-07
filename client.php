@@ -48,4 +48,19 @@ class client{
     $this->constroi();
     return $this->headerFiles;
   }
+  function getStyles(){
+    $this->getConf();
+    foreach ($this->styles as $style) {
+      $styles .= "<link href='/".$style."' rel='stylesheet'>\n";
+    }
+    return $styles;
+  }
+
+  function getScripts(){
+    $this->getConf();
+    foreach ($this->scripts as $script) {
+      $scripts .= "<script scr='/".$script."'></script>\n";
+    }
+    return $scripts;
+  }
 }
